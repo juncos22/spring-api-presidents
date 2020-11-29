@@ -20,11 +20,13 @@ public class PresidentController {
         return ResponseEntity.ok(service.findAll());
     }
 
+    // FIND PRESIDENT BY ID -> localhost:
     @GetMapping("/{id}")
     public ResponseEntity<President> getOne(@PathVariable Integer id) {
         return ResponseEntity.ok(service.getOne(id));
     }
 
+    // FIND PRESIDENT BY POLITICAL PARTY ID
     @GetMapping("/find-party/{politicalPartyId}")
     public ResponseEntity<List<President>> findParty(@PathVariable Integer politicalPartyId) {
         return ResponseEntity.ok(service.findByPoliticalPartyId(politicalPartyId));

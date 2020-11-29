@@ -20,10 +20,12 @@ public class PoliticalPartyController {
         return ResponseEntity.ok(service.findAll());
     }
 
+    // FIND POLITICAL PARTY BY ID -> localhost:8080/political-party/{id}
     @GetMapping("/{id}")
     public ResponseEntity<PoliticalParty> findOne(@PathVariable Integer id) {
         return ResponseEntity.ok(service.getOne(id));
     }
+
 
     @PostMapping("/save")
     public ResponseEntity<Boolean> save(@RequestBody PoliticalParty politicalParty) {
