@@ -27,8 +27,8 @@ public class PresidentService {
         return repo.findAll();
     }
 
-    public boolean save(President president) {
-        return repo.save(president) != null;
+    public President save(President president) {
+        return repo.save(president);
     }
 
     public void delete(Integer id) {

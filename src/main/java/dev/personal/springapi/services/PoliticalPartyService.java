@@ -28,4 +28,7 @@ public class PoliticalPartyService {
     public void delete(Integer id) {
         repo.deleteById(id);
     }
+    public PoliticalParty findByName(String name) {
+        return repo.findByName(name).orElse(new PoliticalParty());
+    }
 }

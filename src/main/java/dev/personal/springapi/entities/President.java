@@ -12,7 +12,9 @@ public class President {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER, optional = false)
+    @ManyToOne
     private PoliticalParty politicalParty;
     private int votes;
+    @OneToOne
+    private PresidentPhoto presidentPhoto;
 }
